@@ -32,6 +32,7 @@
 
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                app:fabCustomSize="72dp"
                 android:visibility="invisible"
                 android:id="@+id/stopbutton"
                 android:src="@drawable/ic_stopbutton"
@@ -45,6 +46,7 @@
 
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                app:fabCustomSize="72dp"
                 android:visibility="invisible"
                 android:id="@+id/pausebutton"
                 android:backgroundTint="@color/white"
@@ -57,6 +59,7 @@
         </LinearLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:fabCustomSize="72dp"
             android:visibility="visible"
             android:id="@+id/playbutton"
             android:backgroundTint="@color/white"
@@ -66,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="115dp"
+            android:layout_marginBottom="100dp"
             />
 
 

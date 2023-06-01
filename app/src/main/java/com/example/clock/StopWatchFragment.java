@@ -1,6 +1,7 @@
 package com.example.clock;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -55,13 +57,27 @@ public class StopWatchFragment extends Fragment {
                 pauseButton.setVisibility(View.VISIBLE);
                 stopButton.setVisibility(View.VISIBLE);
                 startButton.setVisibility(View.INVISIBLE);
+                textView.setTextColor(Color.rgb(71,143,251));
             }
         });
 
         pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                isRunning = false;
+                if(isRunning)
+                {
+                    isRunning = false;
+                    textView.setTextColor(Color.rgb(41,126,255));
+//                    pauseButton.setBackgroundResource(R.drawable.ic_playbutton);
+                    pauseButton.setImageResource(R.drawable.ic_playbutton);
+                }
+                else if(!isRunning)
+                {
+                    isRunning = true;
+                    textView.setTextColor(Color.rgb(71,143,251));
+//                    pauseButton.setBackgroundResource(R.drawable.ic_pausebutton);
+                    pauseButton.setImageResource(R.drawable.ic_pausebutton);
+                }
 
             }
         });
@@ -75,6 +91,7 @@ public class StopWatchFragment extends Fragment {
                 pauseButton.setVisibility(View.INVISIBLE);
                 stopButton.setVisibility(View.INVISIBLE);
                 startButton.setVisibility(View.VISIBLE);
+                textView.setTextColor(Color.rgb(128,128,128));
             }
         });
 
@@ -92,6 +109,7 @@ public class StopWatchFragment extends Fragment {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
+                if(isRunning){seconds++;}
                 int s = seconds%60;
                 int m = seconds/60;
                 int h = m/60;
@@ -100,7 +118,8 @@ public class StopWatchFragment extends Fragment {
 //                int s = (milli/1000)%60;
 //                int h = m/60;
 //                if(isRunning){milliseconds++;}
-                if(isRunning){seconds++;}
+//                if(isRunning){seconds++;}
+
 
 //                String stringFormat = String.format(Locale.getDefault(),"%02d:%02d:%02d:%02d",h,m,s,milli);
                 String stringFormat = String.format(Locale.getDefault(),"%02d:%02d:%02d",h,m,s);
