@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
@@ -34,6 +35,7 @@ public class StopWatchFragment extends Fragment {
 //    int milliseconds = 0;
     int seconds = 0;
     boolean isRunning = false;
+
     public StopWatchFragment() {
         // Required empty public constructor
     }
@@ -48,7 +50,8 @@ public class StopWatchFragment extends Fragment {
         FloatingActionButton startButton = (FloatingActionButton) view.findViewById(R.id.playbutton);
         FloatingActionButton pauseButton = (FloatingActionButton) view.findViewById(R.id.pausebutton);
         FloatingActionButton stopButton = (FloatingActionButton) view.findViewById(R.id.stopbutton);
-        startTimer(textView);
+
+        startStopwatch(textView);
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,7 +105,7 @@ public class StopWatchFragment extends Fragment {
 
 
 
-    public void startTimer(TextView textView)
+    public void startStopwatch(TextView textView)
     {
 //        textView = (TextView) getView().findViewById(R.id.stopwatchtext);
         Handler handler = new Handler();

@@ -3,12 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlarmFragment">
+    tools:context=".TimerFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello Timer Fragment Here" />
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="24dp"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <NumberPicker
+                android:theme="@style/numberpickerstyle"
+                android:layout_weight="1"
+                android:id="@+id/hourtimer"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                />
+
+            <NumberPicker
+                android:theme="@style/numberpickerstyle"
+                android:layout_weight="1"
+                android:id="@+id/minutetimer"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+             />
+
+            <NumberPicker
+                android:theme="@style/numberpickerstyle"
+                android:layout_weight="1"
+                android:id="@+id/secondtimer"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                 />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:alpha="0"
+            android:text=""
+            android:textSize="72sp" />
+
+        <Button
+            android:id="@+id/starttimerbutton"
+            style="@style/MyButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:text="Start" />
+
+    </RelativeLayout>
 </FrameLayout>

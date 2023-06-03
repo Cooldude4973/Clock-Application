@@ -13,8 +13,16 @@
         <item name="android:statusBarColor">#808080</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="MyClockTheme"  parent = "Theme.Clock">
-        <item name="buttonIcon">#FA4B4B</item>
+
+    <style name="MyButtonStyle">
+        <item name="backgroundTint">#ffff</item>
+        <item name="android:textColor">#297EFF</item>
+        <item name="android:textAllCaps">false</item>
 
     </style>
+    <style name="numberpickerstyle">
+        <item name="android:textSize">48dp</item>
+    </style>
+
+
 </resources>
