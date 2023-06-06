@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:orientation="vertical"
+    tools:context=".RepeatAlarmBottomFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        style="@style/RepeatAlarmLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="left"
+            style="@style/AddAlarmTextStyle"
+            android:text="Once"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:gravity="center|right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            android:src="@drawable/cross"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/RepeatAlarmLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="left"
+            style="@style/AddAlarmTextStyle"
+            android:text="Daily"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:gravity="center|right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            android:src="@drawable/cross"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/RepeatAlarmLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="left"
+            style="@style/AddAlarmTextStyle"
+            android:text="Mon to Fri"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:gravity="center|right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            android:src="@drawable/cross"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingBottom="80dp"
+        style="@style/RepeatAlarmLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="left"
+            style="@style/AddAlarmTextStyle"
+            android:text="Custom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:gravity="center|right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitEnd"
+            android:src="@drawable/cross"/>
+    </LinearLayout>
+
+</LinearLayout>
